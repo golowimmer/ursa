@@ -18,6 +18,9 @@ from .code_review_agent import CodeReviewAgent as CodeReviewAgent
 from .code_review_agent import CodeReviewState as CodeReviewState
 from .execution_agent import ExecutionAgent as ExecutionAgent
 from .execution_agent import ExecutionState as ExecutionState
+from .hoss_agent import HOSSAgent as HOSSAgent
+from .hoss_agent import HOSSState as HOSSState
+from .hoss_agent import HOSSSourceFiles as HOSSSourceFiles
 from .hypothesizer_agent import HypothesizerAgent as HypothesizerAgent
 from .hypothesizer_agent import HypothesizerState as HypothesizerState
 from .lammps_agent import LammpsAgent as LammpsAgent
