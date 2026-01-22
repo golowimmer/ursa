@@ -187,7 +187,8 @@ class RAGAgent(BaseAgent):
         if state["doc_texts"]:
             print("[RAG Agent] Ingesting Documents Into RAG Database....")
             with self._vs_lock:
-                self.vectorstore.add_documents(batch_docs, ids=batch_ids)
+                for i in range(0, len(batch_docs), 3000):
+                    self.vectorstore.add_documents(batch_docs[i:(i+3000)], ids=batch_ids[i:(i+3000)])
                 for id in batch_ids:
                     self._mark_paper_ingested(id)
 
